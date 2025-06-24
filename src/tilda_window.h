@@ -236,6 +236,8 @@ gint tilda_window_find_centering_coordinate (tilda_window *tw, enum dimensions d
 
 void tilda_window_update_window_position (tilda_window *tw);
 
+void tilda_window_update_window_size (tilda_window *tw);
+
 #define TILDA_WINDOW(data) ((tilda_window *)(data))
 
 /* Allow scales a bit smaller and a bit larger than the usual pango ranges */

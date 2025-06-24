@@ -33,6 +33,7 @@ static void pull_up (struct tilda_window_ *tw) {
 static void pull_down (struct tilda_window_ *tw) {
     tw->current_state = STATE_GOING_DOWN;
 
+	tilda_window_update_window_size (tw);
     tilda_window_set_active (tw);
 
     if (tw->fullscreen)
@@ -72,6 +73,7 @@ void pull (struct tilda_window_ *tw, enum pull_action action, gboolean force_hid
          */
         g_debug ("Tilda window not focused but visible");
 
+	    tilda_window_update_window_size (tw);
         tilda_window_set_active(tw);
         return;
     }
